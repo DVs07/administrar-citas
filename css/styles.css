@@ -4,8 +4,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+  background-image: url(../img/bg-body.jpg);
   min-height: 100%;
   padding-bottom: 5rem;
 }
@@ -13,7 +12,7 @@ body {
   font-weight: bold;
   font-size: 3rem;
   text-transform: uppercase;
-  color: white;
+  color: black;
 }
 .container {
     background-color: white;
@@ -49,4 +48,33 @@ textarea {
 
 svg {
   width: 21px;
+}
+
+/* DVs07 */
+.rationale-regular {
+  font-family: "Rationale", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.libre-barcode-128-text-regular {
+  font-family: "Libre Barcode 128 Text", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.anek-tamil-regular {
+  font-family: "Anek Tamil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} 
+h2{
+  font-size: 1.5rem;
+  padding: 3.6px;
 }
