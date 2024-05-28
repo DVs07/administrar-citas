@@ -105,8 +105,20 @@ legend{
   background-color: var(--sky);
   border-color: var(--sky-dark);
 }
+.font-size-normal{
+  font-size: 1rem;
+}
+.placeholder-normal{
+  font-size: .97rem;
+}
 @media screen and (max-width: 600px) {
   .h2-mobile {
     font-size: 1.7rem !important;
+  }
+  .font-size-mobile {
+    font-size: .97rem !important;
+  }
+  .placeholder-mobile {
+    font-size: .92rem !important;
   }
 }
