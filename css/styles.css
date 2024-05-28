@@ -1,3 +1,12 @@
+:root {
+  --aqua: #1da396;
+  --aqua-dark: #0f6e5b;
+  --sky: #92cbd4;
+  --sky-dark: #6b9fa0;
+  --text: #186163;
+  --text-light: #1da396;
+  --border: #10755d;
+}
 html {
   min-height: 100%;
 }
@@ -12,7 +21,9 @@ body {
   font-weight: bold;
   font-size: 3rem;
   text-transform: uppercase;
-  color: black;
+  color: white;
+  background-color: var(--aqua) !important;
+  border-color: var(--border) !important;
 }
 .container {
     background-color: white;
@@ -77,4 +88,25 @@ svg {
 h2{
   font-size: 1.5rem;
   padding: 3.6px;
+  color: var(--text);
+}
+legend{
+  color: var(--text);
+}
+.btn{
+  background-color: var(--aqua);
+  border-color: var(--aqua-dark);
+}
+.btn:hover{
+  background-color: var(--aqua-dark);
+  border-color: var(--aqua-dark);
+}
+.sky{
+  background-color: var(--sky);
+  border-color: var(--sky-dark);
+}
+@media screen and (max-width: 600px) {
+  .h2-mobile {
+    font-size: 1.7rem !important;
+  }
 }
