@@ -96,8 +96,13 @@ legend{
 .btn{
   background-color: var(--aqua);
   border-color: var(--aqua-dark);
+  margin-bottom: .6rem;
 }
 .btn:hover{
+  background-color: var(--aqua-dark);
+  border-color: var(--aqua-dark);
+}
+.btn:focus{
   background-color: var(--aqua-dark);
   border-color: var(--aqua-dark);
 }
@@ -111,6 +116,9 @@ legend{
 .placeholder-normal{
   font-size: .97rem;
 }
+.form-group{
+  margin-bottom: .3rem;
+}
 @media screen and (max-width: 600px) {
   .h2-mobile {
     font-size: 1.7rem !important;
@@ -120,5 +128,8 @@ legend{
   }
   .placeholder-mobile {
     font-size: .92rem !important;
+  }
+  .btn{
+    margin-bottom: 1rem !important;
   }
 }
