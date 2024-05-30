@@ -21,6 +21,10 @@ class Citas {
 
         // console.log(this.citas);
     }
+
+    eliminarCita(id) {
+        this.citas = this.citas.filter( cita => cita.id !== id);
+    }
 }
 
 class UI{
@@ -57,37 +61,70 @@ class UI{
             const {mascota, propietario, telefono, fecha, hora, sintomas, id} = cita;
 
             const divCita = document.createElement('div');
-            divCita.classList.add('cita', 'p-3');
+            divCita.classList.add('card', 'col-12','col-sm-5','col-md-5','no-padding', 'mb-4');
             divCita.dataset.id = id;
 
             // Scripting de los elementos de la cita
-            const mascotaParrafo = document.createElement('h2');
-            mascotaParrafo.classList.add('card-title', 'font-weight-bolder');
-            mascotaParrafo.textContent = mascota;
+            const mascotaNombre = document.createElement('div');
+            mascotaNombre.classList.add('card-header', 'font-weight-bolder','card-text', 'text-center', 'text-card-header');
+            mascotaNombre.textContent = mascota;
+
+            const divDatos = document.createElement('div');
+            divDatos.classList.add('card-body');
 
             const propietarioParrafo = document.createElement('p');
+            propietarioParrafo.classList.add('card-text','mb-custom');
+
             propietarioParrafo.innerHTML = `<span class="font-weight-bolder">Propietario: </span> ${propietario}`;
 
             const telefonoParrafo = document.createElement('p');
+            telefonoParrafo.classList.add('card-text','mb-custom');
+
             telefonoParrafo.innerHTML = `<span class="font-weight-bolder">Teléfono: </span> ${telefono}`;
 
             const fechaParrafo = document.createElement('p');
+            fechaParrafo.classList.add('card-text','mb-custom');
+
             fechaParrafo.innerHTML = `<span class="font-weight-bolder">Fecha: </span> ${fecha}`;
 
             const horaParrafo = document.createElement('p');
+            horaParrafo.classList.add('card-text','mb-custom');
+
             horaParrafo.innerHTML = `<span class="font-weight-bolder">Hora: </span> ${hora}`;
 
             const sintomasParrafo = document.createElement('p');
+            sintomasParrafo.classList.add('card-text','mb-custom');
+
             sintomasParrafo.innerHTML = `<span class="font-weight-bolder">Síntomas: </span> ${sintomas}`;
 
+            // Contenedor de Botones
+            const divBotones = document.createElement('div');
+            divBotones.classList.add('card-footer', 'd-flex','justify-content-between');
+
+            // Boton para eliminar esta Cita    
+            const btnEliminarCita = document.createElement('button');
+            btnEliminarCita.classList.add('btn', 'btn-danger', 'mr-2');
+            btnEliminarCita.innerHTML = 'Eliminar Cita';
+
+            // Funcion para eliminar esta Cita
+            btnEliminarCita.onclick = () => {
+                eliminarCita(id);
+            }
 
             // Agregar los parrafos al divCita
-            divCita.appendChild(mascotaParrafo);
-            divCita.appendChild(propietarioParrafo);
-            divCita.appendChild(telefonoParrafo);
-            divCita.appendChild(fechaParrafo);
-            divCita.appendChild(horaParrafo);
-            divCita.appendChild(sintomasParrafo);
+            divCita.appendChild(mascotaNombre);
+            divDatos.appendChild(propietarioParrafo);
+            divDatos.appendChild(telefonoParrafo);
+            divDatos.appendChild(fechaParrafo);
+            divDatos.appendChild(horaParrafo);
+            divDatos.appendChild(sintomasParrafo);
+
+            divBotones.appendChild(btnEliminarCita);
+
+            divCita.appendChild(divDatos);
+            divCita.appendChild(divBotones);
+
+
 
             // Agregar las al DOM
             contenedorCitas.appendChild(divCita);
@@ -181,4 +218,17 @@ function reiniciarObjeto() {
     citaObj.fecha = '';
     citaObj.hora = '';
     citaObj.sintomas = '';
+}
+
+function eliminarCita(id) {
+    // console.log('Cita a eliminar:  ', id);
+
+    // Eliminar la Cita
+
+    // Muestra el mensaje
+    ui.imprimirAlerta('La Cita se ha eliminado correctamente', 'exito');
+
+
+    // Refrescar citas
+    ui.imprimirCitas(administrarCitas);
 }

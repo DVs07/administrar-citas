@@ -93,16 +93,16 @@ h2{
 legend{
   color: var(--text);
 }
-.btn{
+.btn-custom{
   background-color: var(--aqua);
   border-color: var(--aqua-dark);
   margin-bottom: .6rem;
 }
-.btn:hover{
+.btn-custom:hover{
   background-color: var(--aqua-dark);
   border-color: var(--aqua-dark);
 }
-.btn:focus{
+.btn-custom:focus{
   background-color: var(--aqua-dark);
   border-color: var(--aqua-dark);
 }
@@ -118,6 +118,15 @@ legend{
 }
 .form-group{
   margin-bottom: .3rem;
+}
+.no-padding{
+  padding: 0 !important;
+}
+.text-card-header{
+  font-size: 1.2rem;
+}
+.mb-custom{
+  margin-bottom: .2rem;
 }
 @media screen and (max-width: 600px) {
   .h2-mobile {
