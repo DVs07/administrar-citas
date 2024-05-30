@@ -54,7 +54,7 @@ header h1 {
   font-weight: bold;
 }
 textarea {
-    height: 200px!important;
+    height: 150px!important;
 }
 
 svg {
@@ -127,6 +127,13 @@ legend{
 }
 .mb-custom{
   margin-bottom: .2rem;
+}
+.overflow-custom{
+  overflow-y: scroll;
+  height: 77%;
+}
+.card{
+  height: 291px;
 }
 @media screen and (max-width: 600px) {
   .h2-mobile {

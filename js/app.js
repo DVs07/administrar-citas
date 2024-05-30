@@ -224,6 +224,7 @@ function eliminarCita(id) {
     // console.log('Cita a eliminar:  ', id);
 
     // Eliminar la Cita
+    administrarCitas.eliminarCita(id);
 
     // Muestra el mensaje
     ui.imprimirAlerta('La Cita se ha eliminado correctamente', 'exito');
