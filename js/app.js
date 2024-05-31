@@ -61,7 +61,7 @@ class UI{
             const {mascota, propietario, telefono, fecha, hora, sintomas, id} = cita;
 
             const divCita = document.createElement('div');
-            divCita.classList.add('card', 'col-12','col-sm-5','col-md-5','no-padding', 'mb-4');
+            divCita.classList.add('card', 'col-12','col-sm-5','col-md-5','no-padding', 'mt-3');
             divCita.dataset.id = id;
 
             // Scripting de los elementos de la cita

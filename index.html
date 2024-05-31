@@ -15,12 +15,15 @@
         <h2 class="text-center my-5 titulo w-50 h2-mobile">Veterinaria Patitas</h2>
     </div> -->
     
-    <!-- Datos de la mascota -->
-    <div class="container p-5 rounded mt-4">
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container pd-custom rounded mt-1 mb-1">
         <div id="contenido" class="row font-size-mobile font-size-normal">
+            <!-- DATOS DE LA CITA -->
             <div class="col-md-4 agregar-cita">
+                <!-- <h2 class="mb-4 text-center sky">Nueva Cita</h2> -->
                 <form id="nueva-cita">
-                    <legend class="mb-4 text-center sky">Datos de la Mascota</legend>
+                    <!-- DATOS DE LA MASCOTA -->
+                    <legend class="mb-4 border-color border rounded text-center sky">Datos de la Mascota</legend>
                     <div class="form-group col p-0">
                         <!-- <label class="col-form-label">Nombre Mascota:</label> -->
                         <input type="text" id="mascota" name="mascota" class="form-control placeholder-mobile placeholder-normal mb-2" placeholder="Nombre Mascota">
@@ -33,7 +36,8 @@
                         <!-- <label class="col-form-label">Teléfono:</label> -->
                         <input type="tel" id="telefono" name="telefono" class="form-control font-size-mobile placeholder-mobile placeholder-normal mb-4"  placeholder="Número de Teléfono del dueño">
                     </div>
-                    <legend class="mb-4 text-center sky">Fecha y Hora</legend>
+                    <!-- FECHA Y HORA -->
+                    <legend class="mb-4 border-color border rounded text-center sky ">Fecha y Hora</legend>
                     <div class="d-flex justify-content-between p-0">
                         <div class="form-group col-sm-6 p-0">
                             <!-- <label class="col-form-label">Fecha:</label> -->
@@ -45,21 +49,22 @@
                             <input type="time" id="hora" name="hora" class="form-control placeholder-mobile placeholder-normal">
                         </div>
                     </div>
-                    <legend class="mb-4 text-center sky mt-3">Sintomas</legend>
+                    <!-- SINTOMAS -->
+                    <legend class="mb-4 border-color border rounded text-center mt-3 sky">Sintomas</legend>
                     <div class="form-group col p-0">
                         <!-- <label class="col-form-label">Sintomas:</label> -->
                         <textarea id="sintomas" name="sintomas" class="form-control font-size-mobile placeholder-normal"></textarea>
                         
                     </div>
                     <div class="form-group col p-0">
-                        <button type="submit" class="btn btn-success btn-custom placeholder-mobile placeholder-normal w-100 mt-2">Crear Cita</button>
+                        <button type="submit" class="btn btn-success btn-custom placeholder-mobile placeholder-normal w-100 mt-4">Crear Cita</button>
                     </div>
                 </form>
             </div>
             <!-- Citas -->
             <div class="col-md-8">
-                <h2 id="administra" class="mb-4 text-center sky">Proximas citas</h2>
-                <div id="citas" class="row lista-citas container d-flex justify-content-around overflow-custom">
+                <h2 id="administra" class="mb-4 text-center sky border border-color rounded">Proximas citas</h2>
+                <div id="citas" class="container d-flex flex-wrap justify-content-around overflow-custom bg-image rounded">
                     <!-- Insertar las citas acá -->
                 </div>
             </div>

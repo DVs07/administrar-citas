@@ -14,8 +14,9 @@ body {
   margin: 0;
   padding: 0;
   background-image: url(../img/bg-body.jpg);
+  background-size: cover;
+  background-position: center;
   min-height: 100%;
-  padding-bottom: 5rem;
 }
 .titulo {
   font-weight: bold;
@@ -28,9 +29,28 @@ body {
 .container {
     background-color: white;
 }
-header {
-  margin-top: 3rem;
+.bg-image{
+    background-image: url(../img/bg-body.jpg);
+    background-size: cover;
+    background-position: center;
 }
+.card{
+  opacity: 0.89;
+  transition: all 0.9s ease-in-out;
+}
+.card:hover{
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover .card-header, .card:hover .card-body, .card:hover .card-footer{
+  background-color: var(--aqua) !important;
+  border-color: 1px solid --var(--aqua) !important;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+/* header {
+  margin-top: 3rem;
+} 
 header h1 {
   color: white;
 }
@@ -52,9 +72,9 @@ header h1 {
 }
 .lista-citas .cita span {
   font-weight: bold;
-}
+}*/
 textarea {
-    height: 150px!important;
+    height: 140px!important;
 }
 
 svg {
@@ -86,17 +106,24 @@ svg {
   font-style: normal;
 } 
 h2{
-  font-size: 1.5rem;
-  padding: 3.6px;
+  font-size: 1.2rem;
+  padding: 6.49px;
   color: var(--text);
 }
 legend{
+  font-size: 1.2rem;
+  padding: 3.5px;
   color: var(--text);
+}
+.border-bottom{
+  border-bottom: 1px solid var(--sky-dark) !important;
+}
+.border-color{
+  border-color: var(--sky-dark) !important;
 }
 .btn-custom{
   background-color: var(--aqua);
   border-color: var(--aqua-dark);
-  margin-bottom: .6rem;
 }
 .btn-custom:hover{
   background-color: var(--aqua-dark);
@@ -128,9 +155,13 @@ legend{
 .mb-custom{
   margin-bottom: .2rem;
 }
+.pd-custom{
+  padding: 2rem;
+}
 .overflow-custom{
   overflow-y: scroll;
-  height: 77%;
+  height: 539px;
+  padding-bottom: 15px;
 }
 .card{
   height: 291px;
