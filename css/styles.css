@@ -36,18 +36,18 @@ body {
 }
 .card{
   opacity: 0.89;
-  transition: all 0.9s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .card:hover{
   opacity: 1;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.card:hover .card-header, .card:hover .card-body, .card:hover .card-footer{
+/* .card:hover .card-header, .card:hover .card-body, .card:hover .card-footer{
   background-color: var(--aqua) !important;
   border-color: 1px solid --var(--aqua) !important;
   color: white;
   transition: all 0.4s ease-in-out;
-}
+} */
 /* header {
   margin-top: 3rem;
 } 

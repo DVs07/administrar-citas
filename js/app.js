@@ -10,7 +10,7 @@ const sintomasInput = document.querySelector('#sintomas');
 const formulario = document.querySelector('#nueva-cita')
 const contenedorCitas = document.querySelector('#citas');
 
-let editando = false;
+let editando;
 
 // Clases
 class Citas {
@@ -18,7 +18,7 @@ class Citas {
         this.citas = [];
     }
 
-    agregasCita(cita) {
+    agregarCita(cita) {
         this.citas = [...this.citas, cita];
 
         // console.log(this.citas);
@@ -26,6 +26,9 @@ class Citas {
 
     eliminarCita(id) {
         this.citas = this.citas.filter( cita => cita.id !== id);
+    }
+    editarCita(citaActualizada){
+        this.citas = this.citas.map( cita => cita.id === citaActualizada.id ? citaActualizada : cita); // Se usa el operador ternario, para que se actualice la informacion de la Cita.
     }
 }
 
@@ -218,6 +221,10 @@ function nuevaCita(e){
         // console.log('Editando');
         ui.imprimirAlerta('Cita Actualizada Correctamente', 'exito');
 
+        // Pasar el objeto de la Cita a edicion
+        administrarCitas.editarCita({...citaObj});
+
+        // Regresar el texto del boton a su estado original
         formulario.querySelector('button[type="submit"]').textContent = 'Crear Cita';
 
         // Quitamos el modo edicion
@@ -229,7 +236,7 @@ function nuevaCita(e){
         citaObj.id = Date.now();
 
         // Crear una nueva Cita
-        administrarCitas.agregasCita({...citaObj});
+        administrarCitas.agregarCita({...citaObj});
 
         // Mostrar mensaje de agregado correctamente
         ui.imprimirAlerta('Cita Agregada Correctamente', 'exito');
