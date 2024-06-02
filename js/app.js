@@ -20,8 +20,6 @@ class Citas {
 
     agregarCita(cita) {
         this.citas = [...this.citas, cita];
-
-        // console.log(this.citas);
     }
 
     eliminarCita(id) {
@@ -49,10 +47,8 @@ class UI{
         divMensaje.textContent = mensaje;
         
         // Insertar en el DOM
-        // document.querySelector('.agregar-cita').appendChild(divMensaje);
         // Insertar entre dos elementos HTML
         document.querySelector('#administra').insertBefore(divMensaje, document.querySelector('h2').nextSibling);
-        // insertBefore(divMensaje, document.querySelector('#citas'));
         
         // Quitar el alert despues de 3 segundos
         setTimeout( () => {
@@ -61,7 +57,6 @@ class UI{
     }
 
     imprimirCitas({citas}) {
-        // console.log(citas); // Mostrar el arreglo de objetos.
 
         this.limpiarHTML();
 
@@ -123,9 +118,6 @@ class UI{
 
             btnEditarCita.onclick = () => cargarEdicion(cita);
 
-
-
-
             // Funcion para eliminar esta Cita
             btnEliminarCita.onclick = () => {
                 eliminarCita(id);
@@ -148,8 +140,6 @@ class UI{
             // Card
             divCita.appendChild(divDatos);
             divCita.appendChild(divBotones);
-
-
 
             // Agregar las al DOM
             contenedorCitas.appendChild(divCita);
@@ -197,7 +187,7 @@ function eventListeners() {
 // Funciones
 // Almacena los datos en el objeto
 function datosCita(e){
-    // console.log('Mascota: ', e.target.name);
+
     citaObj[e.target.name] = e.target.value; // Agrega datos al objeto. 
 
     console.log(citaObj);
@@ -212,7 +202,7 @@ function nuevaCita(e){
 
     // Validar
     if(mascota === '' || propietario === '' || telefono === '' || fecha === '' || hora === '' || sintomas === ''){
-        // console.log('Todos los campos son obligatorios!!!');
+
         ui.imprimirAlerta('Todos los campos son obligatorios', 'error');
         return;
     } 
@@ -231,7 +221,7 @@ function nuevaCita(e){
         editando = false;
 
     } else{
-        // console.log('Creando nueva Cita');
+
             // Generar un id unico
         citaObj.id = Date.now();
 
@@ -282,7 +272,6 @@ function eliminarCita(id) {
 
 // Carga los datos y el modo edicion
 function cargarEdicion(cita) {
-    // console.log(cita);
 
     const {mascota, propietario, telefono, fecha, hora, sintomas, id} = cita;
 
