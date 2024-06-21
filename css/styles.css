@@ -132,6 +132,11 @@ legend{
 .card{
   height: 291px;
 }
+footer{
+  background-color: var(--aqua);
+  color: white;
+  overflow: hidden;
+}
 @media screen and (max-width: 600px) {
   .h2-mobile {
     font-size: 1.7rem !important;
